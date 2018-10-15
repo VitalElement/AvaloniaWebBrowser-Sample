@@ -1,0 +1,14 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:CefSample.ViewModels;assembly=CefSample"
+        Icon="resm:CefSample.Assets.avalonia-logo.ico"
+        xmlns:local="clr-namespace:CefGlue.Avalonia;assembly=CefGlue.Avalonia"
+        Title="CefSample">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+
+  <local:AvaloniaCefBrowser StartUrl="http://www.bing.com" />
+
+</Window>
