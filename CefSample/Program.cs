@@ -1,6 +1,7 @@
 ﻿using System;
 using Avalonia;
 using Avalonia.Logging.Serilog;
+using CefGlue.Avalonia;
 using CefSample.ViewModels;
 using CefSample.Views;
 
@@ -10,7 +11,7 @@ namespace CefSample
     {
         static void Main(string[] args)
         {
-            BuildAvaloniaApp().Start<MainWindow>(() => new MainWindowViewModel());
+            BuildAvaloniaApp().ConfigureCefGlue(args).Start<MainWindow>(() => new MainWindowViewModel());
         }
 
         public static AppBuilder BuildAvaloniaApp()
